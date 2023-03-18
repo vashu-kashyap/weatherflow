@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather Flow</title>
+  </head>
+  <body>
+  
+
+    <main class="min-h-screen bg-black px-24 w-full max-sm:px-5 flex flex-col justify-center">
+      <h1 class="text-5xl text-center  text-blue-600">
+        Weather FLow
+      </h1>
+      <h2 class="text-white text-center mb-10 text-lg capitalize">access accurate, real-time weather data for any location in the world.</h2>
+
+      <section class="weather-card  w-1/2 max-sm:w-full max-lg:w-full border-2 rounded-lg bg-white mx-auto pb-5">
+        <div class="location-date-time bg-blue-600 rounded-t-lg">
+            <h2 class="location capitalize text-white text-2xl px-2 py-1 " ><span id="city">Delhi</span>,<span id="country">India</span> 
+           <div class="date-time flex justify-between items-center">
+            <h2 class="Date text-white text-xl" id="currentDate"></h2>
+            <h2 class="TIme text text-white text-lg " id="currentTime"></h2>
+           </div>
+        </div>
+
+        <div class="temp flex max-sm:flex-wrap justify-between items-center py-5 px-10">
+          
+            <h3 class="text-black text-7xl"><span id="temp"></span><span class="unit text-blue-600 ">&#8451;</span></h3>
+        
+           <div class="min-max-feel">
+            <p class="capitalize  text-blue-600">feels like: <span class="text-black" id="feels_like">29</span>&#8451;</p>
+            <p class="capitalize  text-blue-600">humidity: <span class="text-black" id="humidity">29</span>%;</p>
+            <p class="capitalize  text-blue-600">pressure: <span class="text-black" id="pressure">29</span>mbar</p>
+            
+          </div>
+
+           <div class="img flex   items-center">
+            <img src="./images/50d.png" class="w-20" id="icon-img">
+            <p class="text-black capitalize text-center text-xl" id="main"></p>
+           </div>
+          
+        </div>
+
+        <h2 class="text-2xl text-center font-bold">Wind Info</h2>
+        <div class="wind-info px-10 flex justify-between">
+
+          <p class="speed capitalize text-center text-xl text-blue-600"> wind speed: <span id="wind_speed" class="text-black">1.54</span>km/h</p>
+          <p class="deg capitalize text-center text-xl text-blue-600">wind deg: <span id="wind_deg" class="text-black">1.54</span>&deg;</p>
+
+         </div>
+
+         <h2 class="text-2xl text-center font-bold">Sunrise / Sunset info</h2>
+
+         <div class="sunrise-sunset  px-10 flex justify-between">
+
+          <div class="sunrise">
+            <img src="./images/01d.png" alt="">
+            <p class="speed capitalize text-center text-xl text-blue-600">Sunrise: <span id="sunrise" class="text-black">1.54</span></p>
+          </div>
+         
+          <div class="sunset">
+            <img src="./images/02d.png" alt="">
+            <p class="speed capitalize text-center text-xl text-blue-600">sunset: <span id="sunset" class="text-black">1.54</span></p>
+
+          </div>
+         </div>
+      </section>
+
+      <div class="searchbox flex justify-center py-3 h-full ">
+
+        <form action="/" class="mx-auto" >
+          <input type="search"   id="searchValue" placeholder="search city,state" class="h-8 border-2 rounded-l-lg capitalize">
+          <input type="submit" id="mysearchbtn" value="Search" class="text-white border-2 px-2 py-[2px] rounded-r-lg bg-blue-600">
+        </form>
+
+      </div>
+
+    </main>
+
+    <script src="./node_modules/flowbite/./dist/flowbite.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
